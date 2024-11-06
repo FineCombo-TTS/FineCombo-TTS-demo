@@ -1,0 +1,183 @@
+<html lang="en-US"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
+    <style>
+      li {
+          list-style-type: disc;
+      }
+    </style>
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Demo for CoVoC2024</title>
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Abstract">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="submitted to ISCSLP 2024.">
+<meta property="og:description" content="submitted to ISCSLP 2024.">
+<link rel="canonical" href="https://thuhcsi.github.io/CoVoC2024/">
+<meta property="og:url" content="https://thuhcsi.github.io/CoVoC2024/">
+<meta property="og:site_name" content="The Codec Language Model-based Zero-Shot Spontaneous Style TTS System for CoVoC Challenge 2024">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Abstract">
+<script type="application/ld+json">
+{"description":"submitted to ISCSLP 2024.","url":"https://thuhcsi.github.io/CoVoC2024/","@type":"WebSite","headline":"Abstract","name":"The Codec Language Model-based Zero-Shot Spontaneous Style TTS System for CoVoC Challenge 2024","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <img id="lab_logo" src="./assets/images/logo.svg"/>
+          <div>
+              <div style="width: 70%;">
+                <h1 id="project_title">The Codec Language Model-based Zero-Shot Spontaneous Style TTS System for CoVoC Challenge 2024</h1>
+                <h2 id="project_tagline">submitted to ISCSLP 2024 Conversational Voice Clone Challenge.</h2>
+              </div>
+          </div>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1 id="abstract">Abstract</h1>
+
+<p>This paper describes the zero-shot spontaneous style TTS system for the ISCSLP 2024 Conversational Voice Clone Challenge (CoVoC). We propose a LLaMA-based codec language model with a delay pattern to achieve spontaneous style voice cloning. To improve speech intelligibility, we introduce the Classifier-Free Guidance (CFG) strategy in the language model to strengthen conditional guidance on token prediction. To generate high-quality utterances, we adopt effective data preprocessing operations and fine-tune our model with selected high-quality spontaneous speech data. The official evaluations in the CoVoC constrained track show that our system achieves the best speech naturalness MOS of 3.80 and obtains considerable speech quality and speaker similarity results.</p>
+
+
+
+<h1 id="Audio samples for different prompts">Audio samples for different prompts</h1>
+<p>Here are some audio samples from the results we submitted to the official competition.</p>                 
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Text</th>
+      <th style="text-align: left">Prompt</th>
+      <th style="text-align: left">Proposed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">我觉得是这样的就是嗯这个东西呃，粗浅的称呼它为稚气吧。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/1-test1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">所以我觉得可能啊经常保留相片是一个非常好的习惯。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0002.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/2-test4.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">嗯还有什么呢印象当中啊特别小特别小的时候还学过游泳。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/3-test3.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">哈喽林暖，那呃最开始呢我想问一下你呃有没有那种晕车的经历？</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/4-test8.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">他总共就只卖这么几样商品，但是呢，确实味道非常的不错。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/5-test15.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">对啊所以一般就是国家政策特别好，一般节假日高速是免费的呀。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0006.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/6-test13.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">啊，再加上啊以前确实我也有一个考飞行员的一个计划。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0007.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/7-test19.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">说到这种小众的旅游景点啊，不知道你有没有什么自己的看法。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0008.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/8-test23.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">然后类似于啊这样的，嗯，不太满意的体验，啊还有很多。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0009.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/9-test21.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">呃就是不知道你有没有一个自己理想当中的房型存在呢？</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0010.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/10-test25.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">怎么说呢，就我个人而言的话，啊我还是不太呃喜欢超前消费的。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0011.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/11-test32.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">嗯，个人觉得这些题目啊还是比较简单的，只要你去花时间学了。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0012.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/12-test30.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">唉怎么说呢，我的科目二大概考了三次，然后第三次才过。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0013.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/13-test37.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">嗯好的，那我想问一下你最近有没有嗯读书的这样的一个习惯？</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0014.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/14-test5.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">啊我有印象，但是他好像是网综吧，我记得是在互联网上出现的。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0015.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/15-test40.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">对，你说到这个话题啊，就是啊双方都不是对方肚子里的蛔虫。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0016.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/16-test42.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">那肯定是有的，像我之前非常非常喜欢单依纯。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0017.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/17-test48.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">那我觉得嗯怎么说呢，每个人都有这样一段一个阶段嘛！</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0018.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/18-test9.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">哦，这个是不是从泰国那边传来的那种鱼疗法，我记得好像是。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0019.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/19-test47.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">除此之外呢，我觉得还有一家早餐店铺啊是非常推荐的。</td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0020.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/20-test24.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+    </tr>
+  </tbody>
+</table>          
+<hr>
+
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p class="copyright">The Codec Language Model-based Zero-Shot Spontaneous Style TTS System for CoVoC Challenge 2024 maintained by <a href="https://github.com/thuhcsi">THU-HCSI</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+  
+
+</body></html>
