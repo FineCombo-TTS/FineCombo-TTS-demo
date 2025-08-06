@@ -1,183 +1,624 @@
-<html lang="en-US"><head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
-    <style>
-      li {
-          list-style-type: disc;
-      }
-    </style>
-
-<!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Demo for CoVoC2024</title>
-<meta name="generator" content="Jekyll v3.9.0">
-<meta property="og:title" content="Abstract">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="submitted to ISCSLP 2024.">
-<meta property="og:description" content="submitted to ISCSLP 2024.">
-<link rel="canonical" href="https://thuhcsi.github.io/CoVoC2024/">
-<meta property="og:url" content="https://thuhcsi.github.io/CoVoC2024/">
-<meta property="og:site_name" content="The Codec Language Model-based Zero-Shot Spontaneous Style TTS System for CoVoC Challenge 2024">
-<meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="Abstract">
-<script type="application/ld+json">
-{"description":"submitted to ISCSLP 2024.","url":"https://thuhcsi.github.io/CoVoC2024/","@type":"WebSite","headline":"Abstract","name":"The Codec Language Model-based Zero-Shot Spontaneous Style TTS System for CoVoC Challenge 2024","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <img id="lab_logo" src="./assets/images/logo.svg"/>
-          <div>
-              <div style="width: 70%;">
-                <h1 id="project_title">The Codec Language Model-based Zero-Shot Spontaneous Style TTS System for CoVoC Challenge 2024</h1>
-                <h2 id="project_tagline">submitted to ISCSLP 2024 Conversational Voice Clone Challenge.</h2>
-              </div>
-          </div>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1 id="abstract">Abstract</h1>
-
-<p>This paper describes the zero-shot spontaneous style TTS system for the ISCSLP 2024 Conversational Voice Clone Challenge (CoVoC). We propose a LLaMA-based codec language model with a delay pattern to achieve spontaneous style voice cloning. To improve speech intelligibility, we introduce the Classifier-Free Guidance (CFG) strategy in the language model to strengthen conditional guidance on token prediction. To generate high-quality utterances, we adopt effective data preprocessing operations and fine-tune our model with selected high-quality spontaneous speech data. The official evaluations in the CoVoC constrained track show that our system achieves the best speech naturalness MOS of 3.80 and obtains considerable speech quality and speaker similarity results.</p>
-
-
-
-<h1 id="Audio samples for different prompts">Audio samples for different prompts</h1>
-<p>Here are some audio samples from the results we submitted to the official competition.</p>                 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Text</th>
-      <th style="text-align: left">Prompt</th>
-      <th style="text-align: left">Proposed</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">我觉得是这样的就是嗯这个东西呃，粗浅的称呼它为稚气吧。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/1-test1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">所以我觉得可能啊经常保留相片是一个非常好的习惯。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0002.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/2-test4.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">嗯还有什么呢印象当中啊特别小特别小的时候还学过游泳。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/3-test3.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">哈喽林暖，那呃最开始呢我想问一下你呃有没有那种晕车的经历？</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/4-test8.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">他总共就只卖这么几样商品，但是呢，确实味道非常的不错。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/5-test15.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">对啊所以一般就是国家政策特别好，一般节假日高速是免费的呀。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0006.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/6-test13.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">啊，再加上啊以前确实我也有一个考飞行员的一个计划。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0007.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/7-test19.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">说到这种小众的旅游景点啊，不知道你有没有什么自己的看法。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0008.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/8-test23.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">然后类似于啊这样的，嗯，不太满意的体验，啊还有很多。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0009.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/9-test21.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">呃就是不知道你有没有一个自己理想当中的房型存在呢？</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0010.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/10-test25.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">怎么说呢，就我个人而言的话，啊我还是不太呃喜欢超前消费的。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0011.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/11-test32.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">嗯，个人觉得这些题目啊还是比较简单的，只要你去花时间学了。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0012.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/12-test30.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">唉怎么说呢，我的科目二大概考了三次，然后第三次才过。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0013.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/13-test37.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">嗯好的，那我想问一下你最近有没有嗯读书的这样的一个习惯？</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0014.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/14-test5.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">啊我有印象，但是他好像是网综吧，我记得是在互联网上出现的。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0015.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/15-test40.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">对，你说到这个话题啊，就是啊双方都不是对方肚子里的蛔虫。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0016.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/16-test42.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">那肯定是有的，像我之前非常非常喜欢单依纯。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0017.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/17-test48.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">那我觉得嗯怎么说呢，每个人都有这样一段一个阶段嘛！</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0018.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/18-test9.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">哦，这个是不是从泰国那边传来的那种鱼疗法，我记得好像是。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0019.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/19-test47.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">除此之外呢，我觉得还有一家早餐店铺啊是非常推荐的。</td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/prompt_wavs/ID0020.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-      <td style="text-align: left"><audio controls=""><source src="./wavs/proposed/20-test24.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    </tr>
-  </tbody>
-</table>          
-<hr>
-
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        
-        <p class="copyright">The Codec Language Model-based Zero-Shot Spontaneous Style TTS System for CoVoC Challenge 2024 maintained by <a href="https://github.com/thuhcsi">THU-HCSI</a></p>
-        
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FineCombo-TTS: Collaborative and Precise Controllable Speech Synthesis Using Text Descriptions and Reference Speech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --max-width: 740px;
+      --bg-page: #fafbfc;
+      --bg-content: #fff;
+      --text-primary: #24292e;
+      --text-secondary: #6a737d;
+      --border: #e1e4e8;
+      --link: #0366d6;
+    }
+  
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-page);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+                   "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+    }
+  
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      background-color: var(--bg-content);
+    }
+  
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 600;
+      margin-bottom: .5rem;
+    }
+  
+    .subtitle {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: .3rem;
+    }
+  
+    p {
+      margin-bottom: 1rem;
+    }
+  
+    .toc {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+  
+    .toc li {
+      margin: .4rem 0;
+    }
+  
+    .toc a {
+      color: var(--link);
+      text-decoration: none;
+    }
+  
+    .toc a:hover {
+      text-decoration: underline;
+    }
+  
+    /* —— 表格基础样式 —— */
+    table {
+      table-layout: fixed;    /* 固定列宽，按下面的百分比分配 */
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+  
+    thead tr th {
+      text-align: center;
+      padding: .5rem 0;
+      border-bottom: 2px solid var(--border);
+      vertical-align: middle;
+    }
+  
+    tbody tr td {
+      text-align: center;
+      padding: .75rem 0;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      vertical-align: middle;
+    }
+  
+    /* 长词/句自动换行 */
+    thead tr th,
+    tbody tr td {
+      word-break: break-word;
+      white-space: normal;
+    }
+  
+    /* —— 各列宽度 —— */
+    th:nth-child(1),
+    td:nth-child(1) { width: 20%; min-width: 160px; }  /* Voice Print */
+    th:nth-child(2),
+    td:nth-child(2) { width: 30%; }                      /* Speaking Content */
+    th:nth-child(3),
+    td:nth-child(3) { width: 30%; }                      /* Instruction */
+    th:nth-child(4),
+    td:nth-child(4) { width: 20%; min-width: 140px; }    /* Generated Speech */
+  
+    /* —— 音频播放器样式 —— */
+    /* 默认情况下所有 audio 保持 inline-block，并可随列宽缩放 */
+    audio {
+      display: inline-block;
+      width: 90%;
+      max-width: 140px;    /* 根据需要调整播放器最大宽度 */
+      vertical-align: middle;
+    }
+  
+    /* 如果你想更精细地控制第一和第四列，也可以单独写 */
+    /* th:nth-child(1) audio,
+       td:nth-child(1) audio,
+       th:nth-child(4) audio,
+       td:nth-child(4) audio {
+         max-width: 140px;
+       } */
+  
+    .footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: .875rem;
+      color: var(--text-secondary);
+    }
+  
+    .footer a {
+      color: var(--link);
+      text-decoration: none;
+    }
+  
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
   
 
-</body></html>
+</head>
+<body>
+  <div class="container">
+    <!-- 标题区 -->
+    <h1>FineCombo-TTS: Collaborative and Precise Controllable Speech Synthesis Using Text Descriptions and Reference Speech</h1>
+    <div class="subtitle">Anonymous Submission</div>
+  
+    <!-- 摘要 -->
+    <h2 id="abstract">Abstract</h2>
+    <p style="font-size: 1.05rem;">
+      Expressive and controllable text-to-speech (TTS) synthesis has become a central focus in the field. 
+      However, existing controllable TTS methods that rely on either reference speech or text descriptions often lack flexibility and fail to achieve precise control. 
+      Recent attempts at joint control operate in a pseudo-collaborative manner: reference speech typically provides only timbre, while text descriptions crudely overwrite global style, resulting in functional segregation and underutilization of the complementary strengths of both modalities.
+      To address these limitations, we propose FineCombo-TTS, a novel framework that fully integrates reference speech and natural language descriptions for flexible and precise controllable speech synthesis.
+      FineCombo-TTS learns rich acoustic information from reference speech and enables precise attribute control—such as prosody, emotion, or timbre—through text descriptions.
+      To avoid information leakage and structural redundancy associated with explicit disentanglement, we extract speech attributes representations from the reference speech using a pretrained FACodec timbre extractor and a residual style encoder. 
+      Furthermore, we introduce a Speech Variance Predictor based on Conditional Flow Matching (CFM), which supports both reference speech and text descriptions as input, enabling precise control over speech attributes without explicit disentanglement.
+      To support the training of FineCombo-TTS, we construct and release FineEdit, a paired speech dataset specifically designed for precise speech attribute control, where the only differences between the source and target speech are described in the control annotations.
+      Extensive experiments demonstrate that our approach bridges the gap between reference speech-based and text description-based control, achieving a truly unified and integrated solution for precise and flexible controllable TTS.
+          </p>
+  
+    <!-- 目录 -->
+    <h2 id="contents">Contents</h2>
+    <ul class="toc">
+      <li><a href="#model-overview">Method</a></li>
+      <li><a href="#Joint Control Demos-Pitch Control">Joint Control Demos-Pitch Control</a></li>
+      <li><a href="#Joint Control Demos-Emotion Control">Joint Control Demos-Emotion Control</a></li>
+      <li><a href="#Joint Control Demos-Timbre Control">Joint Control Demos-Timbre Control</a></li>
+
+      <li><a href="#Description-Only Control Demos">Description-Only Control Demos</a></li>
+
+      <!-- <li><a href="#Joint Control Demos with CFG">Joint Control Demos with CFG</a></li> -->
+    </ul>
+  
+    <!-- 模型概览 -->
+    <h2 id="model-overview">Method</h2>
+    <p>
+      <!-- 简要描述模型 -->
+      FineCombo-TTS is a novel framework that fully integrates reference speech and text descriptions to achieve flexible and precise control in text-to-speech synthesis.
+    </p>
+    <img src="img/model.png" alt="Method Diagram" style="max-width: 100%; margin-top: 1rem;">
+
+    <h2 id="Joint Control Demos-Pitch Control">Joint Control Demos-Pitch Control</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Reference Speech</th>
+          <th>Content</th>
+          <th>Description</th>
+          <th>Generated Speech</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+        <tr>
+          <td>
+            <audio controls>
+              <source src="wavs/prosody/prompt/audio-3.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td>
+            Lay a marble on the table and do nothing eighteen hours of the day but change that marble from one point to another and back again, and you will go insane if you continue long enough.
+          </td>
+          <td>
+            Change the prosody, lower the volume, lower the pitch.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/prosody/ours/audio-3.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+  
+        <tr>
+          <td>
+            <audio controls>
+              <source src="wavs/prosody/prompt/audio-21.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td>
+            The ideal speaker makes his big words stand out like mountain peaks; his unimportant words are submerged like stream beds.
+          </td>
+          <td>
+            Change the prosody, slow down the speech rate, lower the pitch.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/prosody/ours/audio-21.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+  
+        
+        <tr>
+          <td>
+            <audio controls>
+              <source src="wavs/prosody/prompt/audio-13.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td>
+            I feel shooken up dreadful, he's so awful strong; but I'm not very hurt, only I'm sorry, and I've been telling my Captain about it, and asking Him to forgive me.
+          </td>
+          <td>
+            Change the prosody, raise the volume.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/prosody/ours/audio-13.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <audio controls>
+              <source src="wavs/prosody/prompt/audio-14.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td>
+            "Horrid, father" whispered Ned, as if he felt that Indians might be listening.
+          </td>
+          <td>
+            Change the prosody, speed up the speech rate, raise the volume.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/prosody/ours/audio-14.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <audio controls>
+              <source src="wavs/prosody/prompt/audio-52.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td>
+            They were at breakfast, and everybody in the vicinity turned and stared at their table.
+          </td>
+          <td>
+            Change the prosody, lower the volume, raise the pitch.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/prosody/ours/audio-52.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  
+
+    <h2 id="Joint Control Demos-Emotion Control">Joint Control Demos-Emotion Control</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Reference Speech</th>
+          <th>Content</th>
+          <th>Description</th>
+          <th>Generated Speech</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+        <tr>
+          <td>
+            <audio controls>
+              <source src="wavs/emotion/prompt/audio-2.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td>
+            No admittance except on party business.
+          </td>
+          <td>
+            Change the style, speak with a sad emotion.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/emotion/ours/audio-2.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+  
+        <tr>
+          <td>
+            <audio controls>
+              <source src="wavs/emotion/prompt/audio-58.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td>
+            I'm sure your friends can wait!
+          <td>
+            Change the style, speak with a happy emotion.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/emotion/ours/audio-58.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+  
+        
+        <tr>
+          <td>
+            <audio controls>
+              <source src="wavs/emotion/prompt/audio-76.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td>
+            No, I burst the balloon!
+          </td>
+          <td>
+            Change the style, speak with a angry emotion.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/emotion/ours/audio-76.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <audio controls>
+              <source src="wavs/emotion/prompt/audio-103.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td>
+            But what about this thing, sticky!
+          </td>
+          <td>
+            Change the style, speak with a surprised emotion.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/emotion/ours/audio-103.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <audio controls>
+              <source src="wavs/emotion/prompt/audio-199.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td>
+            I've just shot a stag.
+          </td>
+          <td>
+            Change the style, speak with a angry emotion.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/emotion/ours/audio-199.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+
+    <h2 id="Joint Control Demos-Timbre Control">Joint Control Demos-Timbre Control</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Reference Speech</th>
+          <th>Content</th>
+          <th>Description</th>
+          <th>Generated Speech</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+        <tr>
+          <td>
+            <audio controls>
+              <source src="wavs/speaker/ours/audio-0.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td>
+            Chapter ten a warm welcome.
+          </td>
+          <td>
+            Change the timbre to a feminine, clear, slightly muffled, middle-aged, slightly thin, slightly elegant voice.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/speaker/ours/audio-0.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+  
+        <tr>
+          <td>
+            <audio controls>
+              <source src="wavs/speaker/prompt/audio-1.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td>
+            Her shoes were like fishes.
+          </td>
+          <td>
+            Change the timbre to a very masculine, deep, very thick, very mature, slightly old, cool voice.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/speaker/ours/audio-1.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+  
+        
+        <tr>
+          <td>
+            <audio controls>
+              <source src="wavs/speaker/prompt/audio-2.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td>
+            Mister share man, I move for a division.
+          </td>
+          <td>
+            Change the timbre to a feminine, very young, light, clear, slightly cute voice.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/speaker/ours/audio-2.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <audio controls>
+              <source src="wavs/speaker/prompt/audio-5.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td>
+            I do not think it is wise to take her into our confidence.
+          </td>
+          <td>
+            Change the timbre, speak as a feminine,adult-like,tensed,powerful,slightly bright,clear,fluent,intellectual,elegant,slightly sexy,lively,slightly strict,sharp.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/speaker/ours/audio-5.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <audio controls>
+              <source src="wavs/speaker/prompt/audio-6.wav" type="audio/wav">
+            </audio>
+          </td>
+          <td>
+            "My dear uncle," I said, whilst hot tears trickled down my face.
+          </td>
+          <td>
+            Change the timbre, speak as a adult man, slightly weak,bright,soft.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/speaker/ours/audio-6.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  
+
+
+    <h2 id="Description-Only Control Demos">Description-Only Control Demos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Content</th>
+          <th>Description</th>
+          <th>Generated Speech</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            The horse itself, in the foreground of the design, stood motionless and statue like-while farther back, its discomfited rider perished by the dagger of a Metzengerstein.
+          </td>
+          <td>
+            Generate a voice, Speaking slowly, she infused her words with abundant energy.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/description/ours/audio-18.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+  
+        <tr>
+          <td>
+            At the unexpected outcry in the rear the Raturans halted, and held a hasty council of war.
+          </td>
+          <td>
+            Generate a voice, With diminished energy, the man speaks rapidly and in a deep pitch.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/description/ours/audio-14.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+  
+        
+        <tr>
+          <td>
+            "Washington ought to send troops and provisions for the forts at once!" replied mr Fulton.
+          </td>
+          <td>
+            Generate a voice, Speaking with fervor, her voice maintains a high pitch.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/description/ours/audio-10.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            When it was fixed on, the boat was launched and the voyage began.
+          </td>
+          <td>
+            Generate a voice, A man's low-pitched voice carries normal energy as he speaks rapidly.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/description/ours/audio-6.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+        <tr>
+
+          <td>
+            It is a lovely story that follows, full of marvel, as how should it not be?
+          </td>
+          <td>
+            Generate a voice, The man maintains a regular pitch while speaking rapidly with an energetic delivery.
+          </td>
+          <td>
+            <audio controls>
+              <source src="wavs/description/ours/audio-4.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  
+
+
+
+</body>
+</html>
